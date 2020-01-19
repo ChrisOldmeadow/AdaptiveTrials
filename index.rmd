@@ -1,0 +1,187 @@
+---
+
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["custom.css", "default.css", "fonts.css"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+
+---
+
+class: inverse, center, title-slide, middle
+
+<style>
+.title-slide .remark-slide-number {
+  display: none;
+}
+</style>
+
+<div class="my-logo-left"></div>
+
+<div class="my-logo-right"></div> 
+
+# Adaptive Trials
+## Overview and Potential Applications
+
+### Chris Oldmeadow 
+
+### CReDITSS, HMRI 
+### `r Sys.Date()`
+
+
+---
+
+
+```{r setup, include=FALSE, fig.retina = 3}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+#knitr::opts_chunk$set(cache = TRUE, warning = FALSE, message = FALSE, dpi = 180)
+library(ggplot2)
+#library(silgelib)
+library(emo)
+
+
+```
+
+
+ 
+# What are the problems with a standard RCT?
+
+
+
+- `r emo::ji("demon")` Poor recruitment rates
+- `r emo::ji("demon")`  Ignore what occurs before and during trial
+- `r emo::ji("demon")`  Ineffecient
+
+
+---
+class: inverse 
+ 
+# What is an adaptive trial?
+
+--
+
+
+.content-box-blue[ 
+ A clinical trial design that
+allows for **prospectively planned** modifications to one or more aspects of the design based on
+accumulating data from subjects in the trial. 
+]
+
+.footnote[
+Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019]
+---
+class: inverse
+ 
+# What can we adapt? `r icon::fa("check-circle", pull = "right")`
+
+--
+
+- Sample size
+- Patient population (Adaptive enrichment)
+- Treatment arm selection
+- Allocation ratios
+- Outcome and timepoints
+
+
+
+---
+
+ 
+# Advantages
+
+- Statistical efficiency
+- Ethical considerations
+- Improved understanding of interventions (eg sub-groups)
+
+
+---
+# Allocate more participants to better interventions
+
+
+---
+# Add new interventions when available
+
+
+
+---
+# Drop interventions that don’t improve outcomes
+
+
+
+---
+# Increase/stop recruitment in subgroups
+
+
+---
+
+# Change primary endpoint during the trial
+
+---
+class: center, middle, inverse
+
+# Examples
+---
+
+.content-box-blue[ To evaluate the safety and effectiveness of a nine-valent human papillomavirus (HPV)
+vaccine, a clinical trial with adaptive dose selection was carried out (Chen et al. 2015). The
+trial randomized subjects to one of three dose formulations of the nine-valent HPV vaccine or
+an active control, the four-valent HPV vaccine. An interim analysis was carried out to select
+one of the three dose formulations to carry forward into the second stage of the trial. The goal
+of the trial was to select an appropriate dose and confirm the safety and effectiveness of that
+dose in a timely manner.]
+
+
+---
+
+# Dissadvantages
+
+- preplanning adaptive design modifications can require more effort at the design stage,
+leading to longer lead times between planning and starting the trial.
+
+---
+
+# Testing a multi-component resource package to improve the wellbeing of carers of people with dementia
+
+
+- tailored resource package for carers of people with dementia 
+- reducing symptoms of concern (for the PWD)
+- reducing anxiety and dperession (for the carer)
+
+---
+# The intervention components
+
+- Taylored assistance based of areas of need
+- face-to-face group sessions
+- bi-weekly brief symptoms assessment to identify any new areas of need
+
+
+---
+# Is this trial suitable for an adaptive design?
+
+
+- slow recruitment `r emo::ji("+1")`
+- outcome assessed quickly `r emo::ji("question")`
+
+
+---
+# What could we adapt?
+
+- The intervention components? a multi-arm study?
+
+
+---
+class: center, middle, inverse
+
+# Thanks
+
+
+  [**Slides**](https://chrisoldmeadow.github.io/MediationTalk/#1) created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+ 
+
+
+
