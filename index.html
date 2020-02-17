@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>index.utf8</title>
+    <title>index.utf8.md</title>
     <meta charset="utf-8" />
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
@@ -30,7 +30,7 @@ class: inverse, center, title-slide, middle
 ### Chris Oldmeadow 
 
 ### CReDITSS, HMRI 
-### 2020-01-19
+### 2020-02-17
 
 
 ---
@@ -162,8 +162,52 @@ leading to longer lead times between planning and starting the trial.
 ---
 # What could we adapt?
 
-- The intervention components? a multi-arm study?
+- The intervention components? 
+- a multi-arm study?
 
+-  the full intervention is too costly to be cost-effective
+- What is the least effective dose (non-inferior to full)
+
+
+
+
+---
+## Optimising by forward increments
+
+|                   | phase 1| Phase 2 | Phase 3| Phase 4 |
+|-------------------|--------|---------|--------|---------|
+|  Min         | x|x |  |  | 
+|   inc 1           |  |  |x |  |
+|   inc 2           |  |  |  |x | 
+|   inc 3           |  |  |  |  |
+|   Full            | x|x |x |x |
+| Ctr (usual care)  | x|x |x |x |
+
+
+
+
+---
+
+|                   | phase 1| Phase 2 | Phase 3| Phase 4 |
+|-------------------|--------|---------|--------|---------|
+|  Min         | x|x |  |  | 
+|   inc 1           |  |  |x |  |
+|   inc 2           |  |  |  |x | 
+|   inc 3           |  |  |  |  |
+|   Full            | x|x |x |x |
+| Ctr (usual care)  | x|x |x |x |
+
+--
+ phase 1 we would compare:
+
+* Min vs Usual Care : superiority
+* Min vs full : non-inferiority
+
+--
+At the next phase, 
+* Drop *Min* if probability of being superior to ctrl is *low*, with a new arm 
+* Drop *Min* if probability of non-inferiority to full is *low*, and a ( a higher intervention dose is then added) 
+* if either of these are uncertain then they remain in the trial, recruiting more units
 
 ---
 class: center, middle, inverse
