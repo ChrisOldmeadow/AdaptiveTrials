@@ -50,7 +50,6 @@ library(emo)
 # What are the problems with a standard RCT?
 
 
-
 - `r emo::ji("demon")` Poor recruitment rates
 - `r emo::ji("demon")`  Ignore what occurs before and during trial
 - `r emo::ji("demon")`  Ineffecient
@@ -87,21 +86,9 @@ class: inverse
 
 
 
----
-
-# Adaptive trials vs adaptive interventions
-
-* individual tailored interventions
-* treatment regimes
-
-
-
-
----
-
 
  
-# Advantages
+# Advantages of Adaptive Trrials
 
 - Statistical efficiency
 - Ethical considerations
@@ -128,12 +115,21 @@ class: inverse
 
 ---
 
-# Change primary endpoint during the trial
+
+# Adaptive trials vs adaptive interventions
+
+
+* eg SMART trials
+* individual tailored interventions
+* decisions based at the individuals(or cluster)  performance
+* ignore the collective information (different aims)
+
+
 
 ---
 class: center, middle, inverse
 
-# Examples
+# Examples ("pick the winner")
 ---
 
 .content-box-blue[ To evaluate the safety and effectiveness of a nine-valent human papillomavirus (HPV)
@@ -147,6 +143,37 @@ dose in a timely manner.]
 
 ---
 
+
+# Response adaptive randomistion
+
+* Multi arm trial
+* Adapt allocation ratio depending on "Proabbility each treatment is the best"
+* Continually evaluate the data (Bayesian framework)
+* Information goes where it is needed
+* Drop arms -> accelerates the process
+
+
+---
+
+# Bayeisan framework
+
+* estimating probability that a treatment is the best
+* this is not effected by the number of times it is calualted - it only gets
+  more accurate
+
+
+---
+
+# Sub-group enrichment
+
+* some sub-groups of particpants might perform better for different
+  intereventions
+*  A platform trial adapts both the number of interventions (the ratios), and
+  the sub-groups
+
+
+
+
 # Dissadvantages
 
 - preplanning adaptive design modifications can require more effort at the design stage,
@@ -154,76 +181,50 @@ leading to longer lead times between planning and starting the trial.
 
 ---
 
-# Testing a multi-component resource package to improve the wellbeing of carers of people with dementia
 
-
-- tailored resource package for carers of people with dementia 
-- reducing symptoms of concern (for the PWD)
-- reducing anxiety and dperession (for the carer)
+# Oportunities in implementation trials
 
 ---
-# The intervention components
 
-- Taylored assistance based of areas of need
-- face-to-face group sessions
-- bi-weekly brief symptoms assessment to identify any new areas of need
+## Outcomes can be fast
+
+---
+
+## Uncertainty in treatments
+
 
 
 ---
-# Is this trial suitable for an adaptive design?
 
-
-- slow recruitment `r emo::ji("+1")`
-- outcome assessed quickly `r emo::ji("question")`
-
-
----
-# What could we adapt?
-
-- The intervention components? 
-- a multi-arm study?
-
--  the full intervention is too costly to be cost-effective
-- What is the least effective dose (non-inferior to full)
+## Prior data often avaiable
 
 
 
 
 ---
-## Optimising by forward increments
 
-|                   | phase 1| Phase 2 | Phase 3| Phase 4 |
-|-------------------|--------|---------|--------|---------|
-|  Min         | x|x |  |  | 
-|   inc 1           |  |  |x |  |
-|   inc 2           |  |  |  |x | 
-|   inc 3           |  |  |  |  |
-|   Full            | x|x |x |x |
-| Ctr (usual care)  | x|x |x |x |
 
---
-phase 1 we would compare:
+## Multi-stage processes that can be combined into a single on-going study
 
-* Min vs Usual Care : superiority
-* Min vs full : non-inferiority
+
 
 
 ---
 
-|                   | phase 1| Phase 2 | Phase 3| Phase 4 |
-|-------------------|--------|---------|--------|---------|
-|  Min         | x|x |  |  | 
-|   inc 1           |  |  |x |  |
-|   inc 2           |  |  |  |x | 
-|   inc 3           |  |  |  |  |
-|   Full            | x|x |x |x |
-| Ctr (usual care)  | x|x |x |x |
 
 
-At the next phase, 
-* Drop *Min* if probability of being superior to ctrl is *low*, 
-* Drop *Min* if probability of non-inferiority to full is *low*, 
-* if either of these are uncertain then they remain in the trial, recruiting more units
+## Embedding trials into routine care
+
+
+---
+
+# Example: optimising implementation bundles
+
+* A number of components in an implementaiton bundle
+* Traditional approach -  not feasible to perform a large multifactorial trial
+*
+
+
 
 ---
 class: center, middle, inverse
