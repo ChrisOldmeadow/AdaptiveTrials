@@ -39,12 +39,10 @@ class: inverse, center, title-slide, middle
 ```{r setup, include=FALSE, fig.retina = 3}
 options(htmltools.dir.version = FALSE)
 library(knitr)
-#knitr::opts_chunk$set(cache = TRUE, warning = FALSE, message = FALSE, dpi = 180)
+# knitr::opts_chunk$set(cache = TRUE, warning = FALSE, message = FALSE, dpi = 180)
 library(ggplot2)
-#library(silgelib)
+# library(silgelib)
 library(emo)
-
-
 ```
 
 
@@ -90,6 +88,17 @@ class: inverse
 
 
 ---
+
+# Adaptive trials vs adaptive interventions
+
+* individual tailored interventions
+* treatment regimes
+
+
+
+
+---
+
 
  
 # Advantages
