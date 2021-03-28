@@ -5,24 +5,11 @@ institute: "HMRI, Data Sciences"
 date: "27/03/2021"
 ---
 
-## A different paradigm
-
-![](adaptive_vs_traditional.webp)
-<small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small>
-
-
-<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-rel="stylesheet"  type='text/css' >
-
-
-
-
-
 ## What are the problems with a standard RCT?
 
+- **Uncertainty** in many design parameters
 - Ignore what occurs before and during trial
-- **Inefficient**
-
+- *Inefficient*
 
 ## {data-background-image="tenor.gif"}
 
@@ -32,13 +19,8 @@ rel="stylesheet"  type='text/css' >
 
 \elipses Adaptive trials
 
-## {data-background-image="Google_Traffic.png" }
-
- <h2 style="color:black"> Using a GPS to avoid problems that pop-up</h2>
-
 ## What is an adaptive trial?
 
- 
 > A clinical trial design that
 > allows for **prospectively planned** modifications to one or more aspects of the design based on
 > accumulating data from subjects in the trial.
@@ -47,6 +29,14 @@ rel="stylesheet"  type='text/css' >
  Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019.
 </small>
 
+## A different paradigm
+
+![](adaptive_vs_traditional.webp)
+<small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small>
+
+
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+rel="stylesheet"  type='text/css' >
 
 ## What can we adapt? 
 
@@ -56,20 +46,25 @@ rel="stylesheet"  type='text/css' >
 - Allocation ratios
 - Outcome and time-points
 
+## {data-background-image="Google_Traffic.png"  data-background-opacity=0.5}
+
+ <h2 style="color:black"> Using a GPS to find the best course</h2>
+
 ## When is it appropriate?
 
-Outcomes are available in a short time frame
+- Outcomes are available **shortly** after randomisation
+- Recruitment is *slow*
 
 ## Traditional Frequentist framework
 
-**p-value** = probability (under identical replicated experiments)
+*p-value* = probability (under identical replicated experiments)
   of getting a result more extreme **if the null hypothesis were true**
 
 ### 
 
-**$\alpha$** = Type 1 error rate
+*$\alpha$* = Type 1 error rate
 
-  + Probability of **asserting an effect** if the effect is **truly zero**
+  + Probability of **asserting an effect** if the effect is *truly zero*
   + increases with more "looks at the data", outcomes, groups
   
 ## Bayesian framework
@@ -80,23 +75,23 @@ Outcomes are available in a short time frame
 
 ###
 
-- not conditional on a **null hypothesis**
+- not conditional on a *null hypothesis*
 - **not biased** by the number of times it is calculated 
 - 1-P = false positive probability
 
 ## Example: "pick the winner"
 
 - **Goal:** to select an appropriate dose and confirm the safety and effectiveness
-- Do this **efficiently**
+- Do this *efficiently*
 - randomise subjects to one of N dose arms (+/- control)
-- carry the **"best dose"** forward to next phase
+- carry the *"best dose"* forward to next phase
 
 ## Response adaptive randomisation
 
 - Continually evaluate the data (Bayesian framework)
 - **Adapt allocation ratio** depending on "Probability each treatment is the best"
 - Information goes where needed
-- **Drop arms** -> accelerates the process
+- *Drop arms* -> accelerates the process
 
 
 
@@ -123,7 +118,7 @@ Outcomes are available in a short time frame
 
 ## Disadvantages
 
-- **pre planning** adaptive design modifications -> **much** more front-loading of effort**
+- *pre planning* adaptive design modifications -> **much** more front-loading of effort**
 - longer lead times between planning and starting the trial.
 
 

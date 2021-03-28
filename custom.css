@@ -56,7 +56,15 @@ blockquote, .blockquote {
                  font-weight: bold;
                }
 
+.reveal em { color: magenta;
+                 font-style: normal;
+                 font-weight: bold;
+               }
 
+
+.reveal h2  { 
+    text-transform: none;
+}
 
 ******************
  * Coloured content boxes

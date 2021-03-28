@@ -20,134 +20,7 @@
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="./reveal.js/dist/theme/moon.css" id="theme">
-  <style type="text/css">
-  .footnote {
-    position: absolute;
-    bottom: 3em;
-    padding-right: 4em;
-    font-size: 90%;
-  }
-
-  /* USYD blockquote */
-  blockquote, .blockquote {
-    display: block;
-    margin-top: 0.1em;
-    margin-bottom: 0.2em;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-left: solid 10px #0148A4;
-    border-top: solid 2px #0148A4;
-    border-bottom: solid 2px #0148A4;
-    border-right: solid 2px #0148A4;
-    box-shadow: 0 0 6px rgba(0,0,0,0.5);
-    /* background-color: #e64626; */
-    color: #e64626;
-    padding: 0.5em;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-  }
-
-  .blockquote p {
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }
-  .blockquote > h1:first-of-type {
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }
-  .blockquote > h2:first-of-type {
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }
-  .blockquote > h3:first-of-type {
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }
-  .blockquote > h4:first-of-type {
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }
-
-  .text-shadow {
-    text-shadow: 0 0 4px #424242;
-  }
-
-
-  .reveal strong { color: lawngreen;
-                   font-style: normal;
-                   font-weight: bold;
-                 }
-
-
-
-  ******************
-   * Coloured content boxes
-   ****************/
-  .content-box {
-      box-sizing: border-box;
-      background-color: #e2e2e2;
-  }
-  .content-box-blue,
-  .content-box-gray,
-  .content-box-grey,
-  .content-box-army,
-  .content-box-green,
-  .content-box-purple,
-  .content-box-red,
-  .content-box-yellow {
-    box-sizing: border-box;
-    border-radius: 15px;
-    margin: 0 0 15px;
-    overflow: hidden;
-    padding: 0px 20px 0px 20px;
-    width: 100%;
-  }
-  .content-box-blue { background-color: #F0F8FF; }
-  .content-box-gray { background-color: #e2e2e2; }
-  .content-box-grey {	background-color: #F5F5F5; }
-  .content-box-army {	background-color: #737a36; }
-  .content-box-green { background-color: #d9edc2; }
-  .content-box-purple { background-color: #e2e2f9; }
-  .content-box-red { background-color: #ffcccc; }
-  .content-box-yellow { background-color: #fef5c4; }
-  .content-box-blue .remark-inline-code,
-  .content-box-blue .remark-inline-code,
-  .content-box-gray .remark-inline-code,
-  .content-box-grey .remark-inline-code,
-  .content-box-army .remark-inline-code,
-  .content-box-green .remark-inline-code,
-  .content-box-purple .remark-inline-code,
-  .content-box-red .remark-inline-code,
-  .content-box-yellow .remark-inline-code {
-    background: none;
-  }
-
-
-  /*
-  Masterbrand charcoal #424242;
-  C=0 M=0 Y=0 K=90
-  R=66 G=66 B=66
-  Masterbrand red #e64626;
-  C=0 M=0 Y=0 K=90
-  R=66 G=66 B=66
-  Masterbrand white #ffffff;
-  C=0 M=0 Y=0 K=0
-  R=255 G=255 B=255
-  Masterbrand black #000000;
-  C=0 M=0 Y=0 K=100
-  R=10 G=10 B=10
-  Accent yellow #FFB800
-  C=0 M=25 Y=98 K=0
-  R=255 G=184 B=0
-  Accent blue #0148A4
-  C=100 M=61 Y=0 K=0
-  R=1 G=72 B=164
-  Accent grey - supportive #F1F1F1
-  C=0 M=0 Y=0 K=10
-  R=241 G=241 B=241
-  */
-
-  </style>
+  <link rel="stylesheet" href="custom.css"/>
 </head>
 <body>
   <div class="reveal">
@@ -159,18 +32,12 @@
   <p class="date">27/03/2021</p>
 </section>
 
-<section id="a-different-paradigm" class="title-slide slide level2">
-<h2>A different paradigm</h2>
-<p><img data-src="adaptive_vs_traditional.webp" /> <small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small></p>
-<p><link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-rel="stylesheet"  type='text/css' ></p>
-</section>
-
 <section id="what-are-the-problems-with-a-standard-rct" class="title-slide slide level2">
 <h2>What are the problems with a standard RCT?</h2>
 <ul>
+<li><strong>Uncertainty</strong> in many design parameters</li>
 <li>Ignore what occurs before and during trial</li>
-<li><strong>Inefficient</strong></li>
+<li><em>Inefficient</em></li>
 </ul>
 </section>
 
@@ -186,19 +53,19 @@ Driving with your eyes closed
 <p>Adaptive trials</p>
 </section>
 
-<section id="section-1" class="title-slide slide level2" data-background-image="Google_Traffic.png">
-<h2 data-background-image="Google_Traffic.png"></h2>
-<h2 style="color:black">
-Using a GPS to avoid problems that pop-up
-</h2>
-</section>
-
 <section id="what-is-an-adaptive-trial" class="title-slide slide level2">
 <h2>What is an adaptive trial?</h2>
 <blockquote>
 <p>A clinical trial design that allows for <strong>prospectively planned</strong> modifications to one or more aspects of the design based on accumulating data from subjects in the trial.</p>
 </blockquote>
 <p><small> Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019. </small></p>
+</section>
+
+<section id="a-different-paradigm" class="title-slide slide level2">
+<h2>A different paradigm</h2>
+<p><img data-src="adaptive_vs_traditional.webp" /> <small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small></p>
+<p><link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+rel="stylesheet"  type='text/css' ></p>
 </section>
 
 <section id="what-can-we-adapt" class="title-slide slide level2">
@@ -212,36 +79,54 @@ Using a GPS to avoid problems that pop-up
 </ul>
 </section>
 
-<section>
-<section id="traditional-frequentist-framework" class="title-slide slide level2">
-<h2>Traditional Frequentist framework</h2>
-<p><strong>p-value</strong> = probability (under identical replicated experiments) of getting a result more extreme <strong>if the null hypothesis were true</strong></p>
+<section id="section-1" class="title-slide slide level2" data-background-image="Google_Traffic.png" data-background-opacity="0.5">
+<h2 data-background-image="Google_Traffic.png" data-background-opacity="0.5"></h2>
+<h2 style="color:black">
+Using a GPS to find the best course
+</h2>
 </section>
-<section id="section-2" class="slide level3">
-<h3></h3>
-<p><strong><span class="math inline"><em>α</em></span></strong> = Type 1 error rate</p>
+
+<section id="when-is-it-appropriate" class="title-slide slide level2">
+<h2>When is it appropriate?</h2>
 <ul>
-<li>Probability of <strong>asserting an effect</strong> if the effect is <strong>truly zero</strong></li>
-<li>increases with more “looks at the data”, outcomes, groups</li>
-</ul>
-</section></section>
-<section id="bayesian-framework" class="title-slide slide level2">
-<h2>Bayesian framework</h2>
-<p>P = Posterior <strong>probability of effect</strong> (given the data and prior beliefs) <img data-src="bayes.png" /> <small>courtesy: https://medium.com/analytics-vidhya/hyperparameter-search-bayesian-optimization </small> ###</p>
-<ul>
-<li>not conditional on a <strong>null hypothesis</strong></li>
-<li><strong>not biased</strong> by the number of times it is calculated</li>
-<li>1-P = false positive probability</li>
+<li>Outcomes are available <strong>shortly</strong> after randomisation</li>
+<li>Recruitment is <em>slow</em></li>
 </ul>
 </section>
 
+<section>
+<section id="traditional-frequentist-framework" class="title-slide slide level2">
+<h2>Traditional Frequentist framework</h2>
+<p><em>p-value</em> = probability (under identical replicated experiments) of getting a result more extreme <strong>if the null hypothesis were true</strong></p>
+</section>
+<section id="section-2" class="slide level3">
+<h3></h3>
+<p><em><span class="math inline"><em>α</em></span></em> = Type 1 error rate</p>
+<ul>
+<li>Probability of <strong>asserting an effect</strong> if the effect is <em>truly zero</em></li>
+<li>increases with more “looks at the data”, outcomes, groups</li>
+</ul>
+</section></section>
+<section>
+<section id="bayesian-framework" class="title-slide slide level2">
+<h2>Bayesian framework</h2>
+<p>P = Posterior <strong>probability of effect</strong> (given the data and prior beliefs) <img data-src="bayes.png" /> <small>courtesy: https://medium.com/analytics-vidhya/hyperparameter-search-bayesian-optimization </small></p>
+</section>
+<section id="section-3" class="slide level3">
+<h3></h3>
+<ul>
+<li>not conditional on a <em>null hypothesis</em></li>
+<li><strong>not biased</strong> by the number of times it is calculated</li>
+<li>1-P = false positive probability</li>
+</ul>
+</section></section>
 <section id="example-pick-the-winner" class="title-slide slide level2">
 <h2>Example: “pick the winner”</h2>
 <ul>
 <li><strong>Goal:</strong> to select an appropriate dose and confirm the safety and effectiveness</li>
-<li>Do this <strong>efficiently</strong></li>
+<li>Do this <em>efficiently</em></li>
 <li>randomise subjects to one of N dose arms (+/- control)</li>
-<li>carry the <strong>“best dose”</strong> forward to next phase</li>
+<li>carry the <em>“best dose”</em> forward to next phase</li>
 </ul>
 </section>
 
@@ -251,7 +136,7 @@ Using a GPS to avoid problems that pop-up
 <li>Continually evaluate the data (Bayesian framework)</li>
 <li><strong>Adapt allocation ratio</strong> depending on “Probability each treatment is the best”</li>
 <li>Information goes where needed</li>
-<li><strong>Drop arms</strong> -&gt; accelerates the process</li>
+<li><em>Drop arms</em> -&gt; accelerates the process</li>
 </ul>
 </section>
 
@@ -286,7 +171,7 @@ Using a GPS to avoid problems that pop-up
 <section id="disadvantages" class="title-slide slide level2">
 <h2>Disadvantages</h2>
 <ul>
-<li><strong>pre planning</strong> adaptive design modifications -&gt; <strong>much</strong> more front-loading of effort**</li>
+<li><em>pre planning</em> adaptive design modifications -&gt; <strong>much</strong> more front-loading of effort**</li>
 <li>longer lead times between planning and starting the trial.</li>
 </ul>
 </section>
@@ -321,14 +206,6 @@ Using a GPS to avoid problems that pop-up
 <section id="embedding-trials-into-routine-care" class="slide level3">
 <h3>Embedding trials into routine care</h3>
 </section></section>
-<section id="example-optimising-implementation-bundles" class="title-slide slide level2">
-<h2>Example: optimising implementation bundles</h2>
-<ul>
-<li>A number of components in an implementation bundle</li>
-<li>Traditional approach - not feasible to perform a large multi factorial trial</li>
-<li></li>
-</ul>
-</section>
     </div>
   </div>
 
