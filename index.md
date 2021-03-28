@@ -2,29 +2,46 @@
 title: "Adaptive trials"
 author: "Chris Oldmeadow"
 institute: "HMRI, Data Sciences"
-date: "2021/03/27"
+date: "27/03/2021"
 ---
-## What are the problems with a standard RCT?
 
+## A different paradigm
 
-- Poor recruitment rates
-- Ignore what occurs before and during trial
-- Inefficient
+![](adaptive_vs_traditional.webp)
+<small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small>
 
 
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
 rel="stylesheet"  type='text/css' >
 
+
+
+
+
+## What are the problems with a standard RCT?
+
+- Ignore what occurs before and during trial
+- **Inefficient**
+
+
+## {data-background-image="tenor.gif"}
+
+ <h2 style="color:white"> Driving with your eyes closed </h2>
+
+## {data-background-image="Google_Traffic.png"}
+
+ <h2 style="color:black"> Using a GPS to avoid problems that pop-up</h2>
+
 ## What is an adaptive trial?
 
  
- A clinical trial design that
-allows for **prospectively planned** modifications to one or more aspects of the design based on
-accumulating data from subjects in the trial. 
+> A clinical trial design that
+> allows for **prospectively planned** modifications to one or more aspects of the design based on
+> accumulating data from subjects in the trial.[^1] 
 
 
 
-Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019
+[^1] Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019.
 
 ## What can we adapt? 
 
@@ -37,18 +54,17 @@ Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, N
 ## Advantages of Adaptive Trials
 
 - Statistical efficiency
-- Ethical considerations
-- Improved understanding of interventions (eg sub-groups)
 
+- Ethical considerations
+
+- Improved understanding of interventions (eg sub-groups)
 
 ### Allocate more participants to better interventions
 
 
-### Add new interventions when available
-
-
 ### Drop interventions that don’t improve outcomes
 
+### Add new interventions when available
 
 ### Increase/stop recruitment in subgroups
 
@@ -66,13 +82,13 @@ Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, N
 
 ## Examples ("pick the winner")
 
-.content-box-blue[ To evaluate the safety and effectiveness of a nine-valent human papillomavirus (HPV)
+<content-box> To evaluate the safety and effectiveness of a nine-valent human papillomavirus (HPV)
 vaccine, a clinical trial with adaptive dose selection was carried out (Chen et al. 2015). The
 trial randomized subjects to one of three dose formulations of the nine-valent HPV vaccine or
 an active control, the four-valent HPV vaccine. An interim analysis was carried out to select
 one of the three dose formulations to carry forward into the second stage of the trial. The goal
 of the trial was to select an appropriate dose and confirm the safety and effectiveness of that
-dose in a timely manner.]
+dose in a timely manner.</content-box>
 
 
 

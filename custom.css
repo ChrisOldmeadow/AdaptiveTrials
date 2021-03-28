@@ -1,27 +1,10 @@
-.my-logo-left {
-content: "";
-    position: absolute;
-    bottom: 0cm;
-    left:   1cm;
-    height: 2cm;
-    width: 8cm;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("HMRI-partnership-black.jpg");
+<style type="text/css">
+.footnote {
+  position: absolute;
+  bottom: 3em;
+  padding-right: 4em;
+  font-size: 90%;
 }
-
-.my-logo-right {
-content: "";
-    position: absolute;
-    top: 15px;
-    right:   8px;
-    height: 3cm;
-    width: 3cm;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("HMRI-logo-col.png");
-}
-
 
 /* USYD blockquote */
 blockquote, .blockquote {
@@ -67,20 +50,18 @@ blockquote, .blockquote {
   text-shadow: 0 0 4px #424242;
 }
 
-/* if wanted to change mathjax formatting
-.remark-inline-code .mjx-chtml {
-  color: blue;
-}
-*/
 
-/* References: many customisations adapted from the examples here:
-https://github.com/yihui/xaringan/tree/master/inst/rmarkdown/templates/xaringan/resources
-*/
+.reveal strong { color: lawngreen;
+                 font-style: normal;
+                 font-weight: bold;
+               }
+
+
 
 ******************
  * Coloured content boxes
  ****************/
-.content-box { 
+.content-box {
     box-sizing: border-box;
     background-color: #e2e2e2;
 }
@@ -115,18 +96,18 @@ https://github.com/yihui/xaringan/tree/master/inst/rmarkdown/templates/xaringan/
 .content-box-green .remark-inline-code,
 .content-box-purple .remark-inline-code,
 .content-box-red .remark-inline-code,
-.content-box-yellow .remark-inline-code { 
+.content-box-yellow .remark-inline-code {
   background: none;
 }
 
 
-/* 
-Masterbrand charcoal #424242; 
-C=0 M=0 Y=0 K=90 
-R=66 G=66 B=66 
+/*
+Masterbrand charcoal #424242;
+C=0 M=0 Y=0 K=90
+R=66 G=66 B=66
 Masterbrand red #e64626;
 C=0 M=0 Y=0 K=90
-R=66 G=66 B=66 
+R=66 G=66 B=66
 Masterbrand white #ffffff;
 C=0 M=0 Y=0 K=0
 R=255 G=255 B=255
@@ -135,11 +116,13 @@ C=0 M=0 Y=0 K=100
 R=10 G=10 B=10
 Accent yellow #FFB800
 C=0 M=25 Y=98 K=0
-R=255 G=184 B=0 
+R=255 G=184 B=0
 Accent blue #0148A4
 C=100 M=61 Y=0 K=0
-R=1 G=72 B=164 
+R=1 G=72 B=164
 Accent grey - supportive #F1F1F1
 C=0 M=0 Y=0 K=10
-R=241 G=241 B=241 
+R=241 G=241 B=241
 */
+
+</style>

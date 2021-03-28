@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Chris Oldmeadow">
+  <title>Adaptive trials</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="./reveal.js/dist/theme/moon.css" id="theme">
+  <style type="text/css">
+  .footnote {
+    position: absolute;
+    bottom: 3em;
+    padding-right: 4em;
+    font-size: 90%;
+  }
+
+  /* USYD blockquote */
+  blockquote, .blockquote {
+    display: block;
+    margin-top: 0.1em;
+    margin-bottom: 0.2em;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-left: solid 10px #0148A4;
+    border-top: solid 2px #0148A4;
+    border-bottom: solid 2px #0148A4;
+    border-right: solid 2px #0148A4;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    /* background-color: #e64626; */
+    color: #e64626;
+    padding: 0.5em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  }
+
+  .blockquote p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .blockquote > h1:first-of-type {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .blockquote > h2:first-of-type {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .blockquote > h3:first-of-type {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .blockquote > h4:first-of-type {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+
+  .text-shadow {
+    text-shadow: 0 0 4px #424242;
+  }
+
+
+  .reveal strong { color: lawngreen;
+                   font-style: normal;
+                   font-weight: bold;
+                 }
+
+
+
+  ******************
+   * Coloured content boxes
+   ****************/
+  .content-box {
+      box-sizing: border-box;
+      background-color: #e2e2e2;
+  }
+  .content-box-blue,
+  .content-box-gray,
+  .content-box-grey,
+  .content-box-army,
+  .content-box-green,
+  .content-box-purple,
+  .content-box-red,
+  .content-box-yellow {
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 0 0 15px;
+    overflow: hidden;
+    padding: 0px 20px 0px 20px;
+    width: 100%;
+  }
+  .content-box-blue { background-color: #F0F8FF; }
+  .content-box-gray { background-color: #e2e2e2; }
+  .content-box-grey {	background-color: #F5F5F5; }
+  .content-box-army {	background-color: #737a36; }
+  .content-box-green { background-color: #d9edc2; }
+  .content-box-purple { background-color: #e2e2f9; }
+  .content-box-red { background-color: #ffcccc; }
+  .content-box-yellow { background-color: #fef5c4; }
+  .content-box-blue .remark-inline-code,
+  .content-box-blue .remark-inline-code,
+  .content-box-gray .remark-inline-code,
+  .content-box-grey .remark-inline-code,
+  .content-box-army .remark-inline-code,
+  .content-box-green .remark-inline-code,
+  .content-box-purple .remark-inline-code,
+  .content-box-red .remark-inline-code,
+  .content-box-yellow .remark-inline-code {
+    background: none;
+  }
+
+
+  /*
+  Masterbrand charcoal #424242;
+  C=0 M=0 Y=0 K=90
+  R=66 G=66 B=66
+  Masterbrand red #e64626;
+  C=0 M=0 Y=0 K=90
+  R=66 G=66 B=66
+  Masterbrand white #ffffff;
+  C=0 M=0 Y=0 K=0
+  R=255 G=255 B=255
+  Masterbrand black #000000;
+  C=0 M=0 Y=0 K=100
+  R=10 G=10 B=10
+  Accent yellow #FFB800
+  C=0 M=25 Y=98 K=0
+  R=255 G=184 B=0
+  Accent blue #0148A4
+  C=100 M=61 Y=0 K=0
+  R=1 G=72 B=164
+  Accent grey - supportive #F1F1F1
+  C=0 M=0 Y=0 K=10
+  R=241 G=241 B=241
+  */
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Adaptive trials</h1>
+  <p class="author">Chris Oldmeadow</p>
+  <p class="date">27/03/2021</p>
+</section>
+
+<section id="a-different-paradigm" class="title-slide slide level2">
+<h2>A different paradigm</h2>
+<p><img data-src="adaptive_vs_traditional.webp" /> <small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small></p>
+<p><link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+rel="stylesheet"  type='text/css' ></p>
+</section>
+
+<section id="what-are-the-problems-with-a-standard-rct" class="title-slide slide level2">
+<h2>What are the problems with a standard RCT?</h2>
+<ul>
+<li>Ignore what occurs before and during trial</li>
+<li><strong>Inefficient</strong></li>
+</ul>
+</section>
+
+<section id="section" class="title-slide slide level2" data-background-image="tenor.gif">
+<h2 data-background-image="tenor.gif"></h2>
+<h2 style="color:white">
+Driving with your eyes closed
+</h2>
+</section>
+
+<section id="section-1" class="title-slide slide level2" data-background-image="Google_Traffic.png">
+<h2 data-background-image="Google_Traffic.png"></h2>
+<h2 style="color:black">
+Using a GPS to avoid problems that pop-up
+</h2>
+</section>
+
+<section id="what-is-an-adaptive-trial" class="title-slide slide level2">
+<h2>What is an adaptive trial?</h2>
+<blockquote>
+<p>A clinical trial design that allows for <strong>prospectively planned</strong> modifications to one or more aspects of the design based on accumulating data from subjects in the trial.[^1]</p>
+</blockquote>
+<p>[^1] Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019.</p>
+</section>
+
+<section id="what-can-we-adapt" class="title-slide slide level2">
+<h2>What can we adapt?</h2>
+<ul>
+<li>Sample size</li>
+<li>Patient population (Adaptive enrichment)</li>
+<li>Treatment arm selection</li>
+<li>Allocation ratios</li>
+<li>Outcome and timepoints</li>
+</ul>
+</section>
+
+<section>
+<section id="advantages-of-adaptive-trials" class="title-slide slide level2">
+<h2>Advantages of Adaptive Trials</h2>
+<ul>
+<li><p>Statistical efficiency</p></li>
+<li><p>Ethical considerations</p></li>
+<li><p>Improved understanding of interventions (eg sub-groups)</p></li>
+</ul>
+</section>
+<section id="allocate-more-participants-to-better-interventions" class="slide level3">
+<h3>Allocate more participants to better interventions</h3>
+</section>
+<section id="drop-interventions-that-dont-improve-outcomes" class="slide level3">
+<h3>Drop interventions that don’t improve outcomes</h3>
+</section>
+<section id="add-new-interventions-when-available" class="slide level3">
+<h3>Add new interventions when available</h3>
+</section>
+<section id="increasestop-recruitment-in-subgroups" class="slide level3">
+<h3>Increase/stop recruitment in subgroups</h3>
+</section></section>
+<section id="adaptive-trials-vs-adaptive-interventions" class="title-slide slide level2">
+<h2>Adaptive trials vs adaptive interventions</h2>
+<ul>
+<li>eg SMART trials</li>
+<li>individual tailored interventions</li>
+<li>decisions based at the individuals(or cluster) performance</li>
+<li>ignore the collective information (different aims)</li>
+</ul>
+</section>
+
+<section id="examples-pick-the-winner" class="title-slide slide level2">
+<h2>Examples (“pick the winner”)</h2>
+<p><content-box> To evaluate the safety and effectiveness of a nine-valent human papillomavirus (HPV) vaccine, a clinical trial with adaptive dose selection was carried out (Chen et al. 2015). The trial randomized subjects to one of three dose formulations of the nine-valent HPV vaccine or an active control, the four-valent HPV vaccine. An interim analysis was carried out to select one of the three dose formulations to carry forward into the second stage of the trial. The goal of the trial was to select an appropriate dose and confirm the safety and effectiveness of that dose in a timely manner.</content-box></p>
+</section>
+
+<section id="response-adaptive-randomisation" class="title-slide slide level2">
+<h2>Response adaptive randomisation</h2>
+<ul>
+<li>Multi arm trial</li>
+<li>Adapt allocation ratio depending on “Probability each treatment is the best”</li>
+<li>Continually evaluate the data (Bayesian framework)</li>
+<li>Information goes where it is needed</li>
+<li>Drop arms -&gt; accelerates the process</li>
+</ul>
+</section>
+
+<section id="bayesian-framework" class="title-slide slide level2">
+<h2>Bayesian framework</h2>
+<ul>
+<li>estimating probability that a treatment is the best</li>
+<li>this is not effected by the number of times it is calculated - it only gets more accurate</li>
+</ul>
+</section>
+
+<section id="sub-group-enrichment" class="title-slide slide level2">
+<h2>Sub-group enrichment</h2>
+<ul>
+<li>some sub-groups of participants might perform better for different interventions</li>
+<li>A platform trial adapts both the number of interventions (the ratios), and the sub-groups</li>
+</ul>
+</section>
+
+<section id="disadvantages" class="title-slide slide level2">
+<h2>Disadvantages</h2>
+<ul>
+<li>pre planning adaptive design modifications can require more effort at the design stage, leading to longer lead times between planning and starting the trial.</li>
+</ul>
+</section>
+
+<section>
+<section id="opportunities-in-implementation-trials" class="title-slide slide level2">
+<h2>Opportunities in implementation trials</h2>
+
+</section>
+<section id="outcomes-can-be-fast" class="slide level3">
+<h3>Outcomes can be fast</h3>
+</section>
+<section id="uncertainty-in-treatments" class="slide level3">
+<h3>Uncertainty in treatments</h3>
+</section>
+<section id="prior-data-often-available" class="slide level3">
+<h3>Prior data often available</h3>
+</section>
+<section id="multi-stage-processes-that-can-be-combined-into-a-single-on-going-study" class="slide level3">
+<h3>Multi-stage processes that can be combined into a single on-going study</h3>
+</section>
+<section id="embedding-trials-into-routine-care" class="slide level3">
+<h3>Embedding trials into routine care</h3>
+</section></section>
+<section id="example-optimising-implementation-bundles" class="title-slide slide level2">
+<h2>Example: optimising implementation bundles</h2>
+<ul>
+<li>A number of components in an implementation bundle</li>
+<li>Traditional approach - not feasible to perform a large multi factorial trial</li>
+<li></li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
