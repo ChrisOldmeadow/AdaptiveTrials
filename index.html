@@ -181,6 +181,11 @@ Driving with your eyes closed
 </h2>
 </section>
 
+<section id="there-is-a-solution" class="title-slide slide level2">
+<h2>There is a solution!</h2>
+<p>Adaptive trials</p>
+</section>
+
 <section id="section-1" class="title-slide slide level2" data-background-image="Google_Traffic.png">
 <h2 data-background-image="Google_Traffic.png"></h2>
 <h2 style="color:black">
@@ -203,7 +208,58 @@ Using a GPS to avoid problems that pop-up
 <li>Patient population (Adaptive enrichment)</li>
 <li>Treatment arm selection</li>
 <li>Allocation ratios</li>
-<li>Outcome and timepoints</li>
+<li>Outcome and time-points</li>
+</ul>
+</section>
+
+<section>
+<section id="traditional-frequentist-framework" class="title-slide slide level2">
+<h2>Traditional Frequentist framework</h2>
+<p><strong>p-value</strong> = probability (under identical replicated experiments) of getting a result more extreme <strong>if the null hypothesis were true</strong></p>
+</section>
+<section id="section-2" class="slide level3">
+<h3></h3>
+<p><strong><span class="math inline"><em>α</em></span></strong> = Type 1 error rate</p>
+<ul>
+<li>Probability of <strong>asserting an effect</strong> if the effect is <strong>truly zero</strong></li>
+<li>increases with more “looks at the data”, outcomes, groups</li>
+</ul>
+</section></section>
+<section id="bayesian-framework" class="title-slide slide level2">
+<h2>Bayesian framework</h2>
+<p>P = Posterior <strong>probability of effect</strong> (given the data and prior beliefs) <img data-src="bayes.png" /> <small>courtesy: https://medium.com/analytics-vidhya/hyperparameter-search-bayesian-optimization </small> ###</p>
+<ul>
+<li>not conditional on a <strong>null hypothesis</strong></li>
+<li><strong>not biased</strong> by the number of times it is calculated</li>
+<li>1-P = false positive probability</li>
+</ul>
+</section>
+
+<section id="example-pick-the-winner" class="title-slide slide level2">
+<h2>Example: “pick the winner”</h2>
+<ul>
+<li><strong>Goal:</strong> to select an appropriate dose and confirm the safety and effectiveness</li>
+<li>Do this <strong>efficiently</strong></li>
+<li>randomise subjects to one of N dose arms (+/- control)</li>
+<li>carry the <strong>“best dose”</strong> forward to next phase</li>
+</ul>
+</section>
+
+<section id="response-adaptive-randomisation" class="title-slide slide level2">
+<h2>Response adaptive randomisation</h2>
+<ul>
+<li>Continually evaluate the data (Bayesian framework)</li>
+<li><strong>Adapt allocation ratio</strong> depending on “Probability each treatment is the best”</li>
+<li>Information goes where needed</li>
+<li><strong>Drop arms</strong> -&gt; accelerates the process</li>
+</ul>
+</section>
+
+<section id="sub-group-enrichment" class="title-slide slide level2">
+<h2>Sub-group enrichment</h2>
+<ul>
+<li>some sub-groups might perform better for different interventions</li>
+<li>A platform trial adapts both the number of interventions (the ratios), and the sub-groups</li>
 </ul>
 </section>
 
@@ -227,6 +283,14 @@ Using a GPS to avoid problems that pop-up
 <section id="increasestop-recruitment-in-subgroups" class="slide level3">
 <h3>Increase/stop recruitment in subgroups</h3>
 </section></section>
+<section id="disadvantages" class="title-slide slide level2">
+<h2>Disadvantages</h2>
+<ul>
+<li><strong>pre planning</strong> adaptive design modifications -&gt; <strong>much</strong> more front-loading of effort**</li>
+<li>longer lead times between planning and starting the trial.</li>
+</ul>
+</section>
+
 <section id="adaptive-trials-vs-adaptive-interventions" class="title-slide slide level2">
 <h2>Adaptive trials vs adaptive interventions</h2>
 <ul>
@@ -234,55 +298,6 @@ Using a GPS to avoid problems that pop-up
 <li>individual tailored interventions</li>
 <li>decisions based at the individuals(or cluster) performance</li>
 <li>ignore the collective information (different aims)</li>
-</ul>
-</section>
-
-<section id="examples-pick-the-winner" class="title-slide slide level2">
-<h2>Examples (“pick the winner”)</h2>
-<ul>
-<li>Goal: to select an appropriate dose and confirm the safety and effectiveness</li>
-<li>Do this efficiently</li>
-<li>randomise subjects to one of N dose arms (+/- control)</li>
-<li>carry the “best dose” forward to next phase</li>
-</ul>
-</section>
-
-<section id="response-adaptive-randomisation" class="title-slide slide level2">
-<h2>Response adaptive randomisation</h2>
-<ul>
-<li>Multi arm trial</li>
-<li>Adapt allocation ratio depending on “Probability each treatment is the best”</li>
-<li>Continually evaluate the data (Bayesian framework)</li>
-<li>Information goes where needed</li>
-<li>Drop arms -&gt; accelerates the process</li>
-</ul>
-</section>
-
-<section id="traditional-frequentist-framework" class="title-slide slide level2">
-<h2>Traditional Frequentist framework</h2>
-<ul>
-<li><p>P-value = probability (under identical replicated experiments) of getting a result more extreme if the null hypothesis were true</p></li>
-<li><p><span class="math inline"><em>α</em></span> = Type 1 error rate</p></li>
-<li><p>Probability of <em>asserting an effect</em> if the effect is truly zero</p></li>
-<li><p>alpha increases with more “looks at the data” # Bayesian framework</p></li>
-<li><p>Probab</p></li>
-<li><p>estimating probability that a treatment is the best</p></li>
-<li><p>this is not effected by the number of times it is calculated - it only gets more accurate</p></li>
-</ul>
-</section>
-
-<section id="sub-group-enrichment" class="title-slide slide level2">
-<h2>Sub-group enrichment</h2>
-<ul>
-<li>some sub-groups of participants might perform better for different interventions</li>
-<li>A platform trial adapts both the number of interventions (the ratios), and the sub-groups</li>
-</ul>
-</section>
-
-<section id="disadvantages" class="title-slide slide level2">
-<h2>Disadvantages</h2>
-<ul>
-<li>pre planning adaptive design modifications can require more effort at the design stage, leading to longer lead times between planning and starting the trial.</li>
 </ul>
 </section>
 
