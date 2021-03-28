@@ -37,11 +37,12 @@ rel="stylesheet"  type='text/css' >
  
 > A clinical trial design that
 > allows for **prospectively planned** modifications to one or more aspects of the design based on
-> accumulating data from subjects in the trial.[^1] 
+> accumulating data from subjects in the trial.
 
+<small> 
+ Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019.
+</small>
 
-
-[^1] Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019.
 
 ## What can we adapt? 
 
@@ -53,14 +54,9 @@ rel="stylesheet"  type='text/css' >
 
 ## Advantages of Adaptive Trials
 
-- Statistical efficiency
+### Statistical efficiency
 
-- Ethical considerations
-
-- Improved understanding of interventions (eg sub-groups)
-
-### Allocate more participants to better interventions
-
+### More participants get better interventions
 
 ### Drop interventions that don’t improve outcomes
 
@@ -69,45 +65,37 @@ rel="stylesheet"  type='text/css' >
 ### Increase/stop recruitment in subgroups
 
 
-## Adaptive trials vs adaptive interventions
 
+## Traditional Frequentist framework
 
-* eg SMART trials
-* individual tailored interventions
-* decisions based at the individuals(or cluster)  performance
-* ignore the collective information (different aims)
+- P-value = probability (under identical replicated experiments) of getting a result more extreme if the null hypothesis were true
+-  $\alpha$ = Type 1 error rate
+- 
+  - Probability of *asserting an effect* if the effect is truly zero
+  - $\alpha$ increases with more "looks at the data"
+  
+## Bayesian framework
 
+- P = Posterior probability of effect (given the data and prior beliefs)
+- estimating probability that a treatment is the best
+- not conditional on a null hypothesis
+- not effected by the number of times it is calculated - it only gets
+  more accurate
+- 1-P = false positive probability
 
+## Example: "pick the winner"
 
-
-## Examples ("pick the winner")
-
-<content-box> To evaluate the safety and effectiveness of a nine-valent human papillomavirus (HPV)
-vaccine, a clinical trial with adaptive dose selection was carried out (Chen et al. 2015). The
-trial randomized subjects to one of three dose formulations of the nine-valent HPV vaccine or
-an active control, the four-valent HPV vaccine. An interim analysis was carried out to select
-one of the three dose formulations to carry forward into the second stage of the trial. The goal
-of the trial was to select an appropriate dose and confirm the safety and effectiveness of that
-dose in a timely manner.</content-box>
-
-
-
+- Goal: to select an appropriate dose and confirm the safety and effectiveness
+- Do this efficiently
+- randomise subjects to one of N dose arms (+/- control)
+- carry the "best dose" forward to next phase
 
 ## Response adaptive randomisation
 
-* Multi arm trial
-* Adapt allocation ratio depending on "Probability each treatment is the best"
-* Continually evaluate the data (Bayesian framework)
-* Information goes where it is needed
-* Drop arms -> accelerates the process
-
-
-
-## Bayesian framework
-
-* estimating probability that a treatment is the best
-* this is not effected by the number of times it is calculated - it only gets
-  more accurate
+- Continually evaluate the data (Bayesian framework)
+- Adapt allocation ratio depending on "Probability each treatment is the best"
+- Information goes where needed
+- Drop arms -> accelerates the process
 
 
 
@@ -120,11 +108,19 @@ dose in a timely manner.</content-box>
 
 
 
-
 ## Disadvantages
 
 - pre planning adaptive design modifications can require more effort at the design stage,
 leading to longer lead times between planning and starting the trial.
+
+
+## Adaptive trials vs adaptive interventions
+
+- eg SMART trials
+- individual tailored interventions
+- decisions based at the individuals(or cluster)  performance
+- ignore the collective information (different aims)
+
 
 
 
