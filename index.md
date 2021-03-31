@@ -2,14 +2,14 @@
 title: "Adaptive trials"
 author: "Chris Oldmeadow"
 institute: "HMRI, Data Sciences"
-date: "27/03/2021"
+date: "01/04/2021"
 ---
 
 ## What are the problems with a standard RCT?
 
 - **Uncertainty** in many design parameters
-- Ignore what occurs before and during trial
-- *Inefficient*
+- *Ignore* what occurs during trial
+- **Inefficient**
 
 ## {data-background-image="tenor.gif"}
 
@@ -42,13 +42,13 @@ rel="stylesheet"  type='text/css' >
 
 - Sample size
 - Patient population (Adaptive enrichment)
-- Treatment arm selection
 - Allocation ratios
+- Treatment arm selection
 - Outcome and time-points
 
-## {data-background-image="Google_Traffic.png"  data-background-opacity=0.5}
+## {data-background-image="Google_Traffic.png"  data-background-opacity=0.2}
 
- <h2 style="color:black"> Using a GPS to find the best course</h2>
+ Using a GPS to find the best course
 
 ## When is it appropriate?
 
@@ -118,7 +118,7 @@ rel="stylesheet"  type='text/css' >
 
 ## Disadvantages
 
-- *pre planning* adaptive design modifications -> **much** more front-loading of effort**
+- *pre planning* adaptive design modifications -> much more **front-loading** of effort
 - longer lead times between planning and starting the trial.
 
 
