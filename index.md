@@ -121,7 +121,7 @@ rel="stylesheet"  type='text/css' >
 
 ## Adaptive trials vs adaptive interventions
 
-- eg SMART trials
+- eg SMART (sequential, multiple assignment, randomised) trials
 - individual tailored interventions
 - decisions based at the individuals(or cluster)  performance
 - ignore the collective information (different aims)
@@ -145,7 +145,7 @@ rel="stylesheet"  type='text/css' >
 
 ### Embedding trials into routine care
 
-## Questions/Opportunities/Discusison
+## Questions/Opportunities/Discussion
 
 
 
