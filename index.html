@@ -36,6 +36,7 @@
 <section id="what-are-the-problems-with-a-standard-rct" class="title-slide slide level2">
 <h2>What are the problems with a standard RCT?</h2>
 <ul>
+<li>Design -&gt; wait -&gt; analyse -&gt; learn from mistakes -&gt; repeat</li>
 <li><strong>Uncertainty</strong> in many design parameters</li>
 <li><em>Ignore</em> what occurs during trial</li>
 <li><strong>Inefficient</strong></li>
@@ -49,9 +50,11 @@ Driving with your eyes closed
 </h2>
 </section>
 
-<section id="there-is-a-solution" class="title-slide slide level2">
-<h2>There is a solution!</h2>
-<p>Adaptive trials</p>
+<section id="a-different-paradigm" class="title-slide slide level2">
+<h2>A different paradigm</h2>
+<p><img data-src="adaptive_vs_traditional.webp" /> <small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small></p>
+<p><link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+rel="stylesheet"  type='text/css' ></p>
 </section>
 
 <section id="what-is-an-adaptive-trial" class="title-slide slide level2">
@@ -60,13 +63,6 @@ Driving with your eyes closed
 <p>A clinical trial design that allows for <strong>prospectively planned</strong> modifications to one or more aspects of the design based on accumulating data from subjects in the trial.</p>
 </blockquote>
 <p><small> Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019. </small></p>
-</section>
-
-<section id="a-different-paradigm" class="title-slide slide level2">
-<h2>A different paradigm</h2>
-<p><img data-src="adaptive_vs_traditional.webp" /> <small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small></p>
-<p><link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-rel="stylesheet"  type='text/css' ></p>
 </section>
 
 <section id="what-can-we-adapt" class="title-slide slide level2">
@@ -93,6 +89,11 @@ rel="stylesheet"  type='text/css' ></p>
 </ul>
 </section>
 
+<section id="what-about-type-1-errors" class="title-slide slide level2">
+<h2>What about type 1 errors?</h2>
+
+</section>
+
 <section>
 <section id="traditional-frequentist-framework" class="title-slide slide level2">
 <h2>Traditional Frequentist framework</h2>
@@ -109,22 +110,22 @@ rel="stylesheet"  type='text/css' ></p>
 <section>
 <section id="bayesian-framework" class="title-slide slide level2">
 <h2>Bayesian framework</h2>
-<p>P = Posterior <strong>probability of effect</strong> (given the data and prior beliefs) <img data-src="bayes.png" /> <small>courtesy: https://medium.com/analytics-vidhya/hyperparameter-search-bayesian-optimization </small></p>
+<p>P = Posterior <strong>probability of effect</strong></p>
+<p><img src="bayes.png" width="200"></p>
 </section>
 <section id="section-3" class="slide level3">
 <h3></h3>
 <ul>
 <li>not conditional on a <em>null hypothesis</em></li>
 <li><strong>not biased</strong> by the number of times it is calculated</li>
-<li>1-P = false positive probability</li>
 </ul>
 </section></section>
 <section id="example-pick-the-winner" class="title-slide slide level2">
 <h2>Example: “pick the winner”</h2>
 <ul>
-<li><strong>Goal:</strong> to select an appropriate dose and confirm the safety and effectiveness</li>
+<li><strong>Goal:</strong> to select an appropriate treatment dose and confirm the safety and effectiveness</li>
 <li>Do this <em>efficiently</em></li>
-<li>randomise subjects to one of N dose arms (+/- control)</li>
+<li>randomise subjects to one of N dose arms</li>
 <li>carry the <em>“best dose”</em> forward to next phase</li>
 </ul>
 </section>
@@ -133,8 +134,10 @@ rel="stylesheet"  type='text/css' ></p>
 <h2>Response adaptive randomisation</h2>
 <ul>
 <li>Continually evaluate the data (Bayesian framework)</li>
-<li><strong>Adapt allocation ratio</strong> depending on “Probability each treatment is the best”</li>
+<li>Probability each treatment is best</li>
+<li><strong>Adapt allocation ratio</strong> depending on P_best</li>
 <li>Information goes where needed</li>
+<li>Decision rules</li>
 <li><em>Drop arms</em> -&gt; accelerates the process</li>
 </ul>
 </section>
@@ -205,6 +208,10 @@ rel="stylesheet"  type='text/css' ></p>
 <section id="embedding-trials-into-routine-care" class="slide level3">
 <h3>Embedding trials into routine care</h3>
 </section></section>
+<section id="questionsopportunitiesdiscusison" class="title-slide slide level2">
+<h2>Questions/Opportunities/Discusison</h2>
+
+</section>
     </div>
   </div>
 

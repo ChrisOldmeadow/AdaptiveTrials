@@ -6,7 +6,7 @@ date: "01/04/2021"
 ---
 
 ## What are the problems with a standard RCT?
-
+- Design -> wait -> analyse -> learn from mistakes -> repeat
 - **Uncertainty** in many design parameters
 - *Ignore* what occurs during trial
 - **Inefficient**
@@ -15,9 +15,15 @@ date: "01/04/2021"
 
  <h2 style="color:white"> Driving with your eyes closed </h2>
 
-## There is a solution!
+## A different paradigm
 
-\elipses Adaptive trials
+![](adaptive_vs_traditional.webp)
+<small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small>
+
+
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+rel="stylesheet"  type='text/css' >
+
 
 ## What is an adaptive trial?
 
@@ -28,15 +34,6 @@ date: "01/04/2021"
 <small> 
  Adaptive Design Clinical Trials for Drugs and Biologics Guidance for Industry, Nov 2019.
 </small>
-
-## A different paradigm
-
-![](adaptive_vs_traditional.webp)
-<small>Pallmann, P., Bedding, A.W., Choodari-Oskooei, B. et al. Adaptive designs in clinical trials: why use them, and how to run and report them. BMC Med 16, 29 (2018)</small>
-
-
-<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-rel="stylesheet"  type='text/css' >
 
 ## What can we adapt? 
 
@@ -55,6 +52,8 @@ rel="stylesheet"  type='text/css' >
 - Outcomes are available **shortly** after randomisation
 - Recruitment is *slow*
 
+## What about type 1 errors?
+
 ## Traditional Frequentist framework
 
 *p-value* = probability (under identical replicated experiments)
@@ -69,31 +68,29 @@ rel="stylesheet"  type='text/css' >
   
 ## Bayesian framework
 
- P = Posterior **probability of effect** (given the data and prior beliefs)
-![](bayes.png)
-<small>courtesy: https://medium.com/analytics-vidhya/hyperparameter-search-bayesian-optimization </small>
+ P = Posterior **probability of effect** 
+
+<img src="bayes.png" width="200">
 
 ###
-
 - not conditional on a *null hypothesis*
 - **not biased** by the number of times it is calculated 
-- 1-P = false positive probability
 
 ## Example: "pick the winner"
 
-- **Goal:** to select an appropriate dose and confirm the safety and effectiveness
+- **Goal:** to select an appropriate treatment dose and confirm the safety and effectiveness
 - Do this *efficiently*
-- randomise subjects to one of N dose arms (+/- control)
+- randomise subjects to one of N dose arms
 - carry the *"best dose"* forward to next phase
 
 ## Response adaptive randomisation
 
 - Continually evaluate the data (Bayesian framework)
-- **Adapt allocation ratio** depending on "Probability each treatment is the best"
+- Probability each treatment is best
+- **Adapt allocation ratio** depending on P_best
 - Information goes where needed
+- Decision rules
 - *Drop arms* -> accelerates the process
-
-
 
 ## Sub-group enrichment
 
@@ -140,9 +137,6 @@ rel="stylesheet"  type='text/css' >
 
 ### Uncertainty in treatments
 
-
-
-
 ### Prior data often available
 
 
@@ -151,7 +145,7 @@ rel="stylesheet"  type='text/css' >
 
 ### Embedding trials into routine care
 
-
+## Questions/Opportunities/Discusison
 
 
 
